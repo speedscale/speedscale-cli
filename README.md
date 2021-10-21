@@ -1,5 +1,7 @@
 # speedscale CLI
 
+<img src="https://github.com/speedscale/speedscale/raw/master/logo/gold_speedscale_logo_landscape_large.png" width="400">
+
 `speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).
 
 TODO: Insert asciinema video here showing speedscale in action.
