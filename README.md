@@ -1,12 +1,10 @@
-# codename-litespeed
+# speedscale CLI
 
-NOTE: This name is just a placeholder.
+`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).
 
-codename-litespeed is a container-centric, capture and replay CLI tool.
+TODO: Insert asciinema video here showing speedscale in action.
 
-TODO: Insert asciinema video here showing codename-litespeed in action.
-
-## Why use codename-litespeed?
+## Why use speedscale?
 
 - Visualize inbound / outbound network communication.
 - Understand the relationship between an application and its external dependencies.
@@ -17,19 +15,19 @@ TODO: Insert asciinema video here showing codename-litespeed in action.
 ## Quick Start
 
 NOTE: maybe we want to provide a curl statement here instead.
-[Download](link/to/litespeed/latest/dl) the latest verion of codename-litespeed.
+[Download](link/to/litespeed/latest/dl) the latest verion of `speedscale`.
 
-Before working with codename-litespeed your application will need to be built into a docker container.
+Before working with `speedscale` your application will need to be built into a docker container.
 
-Once built have codename-litespeed record a "snapshot" of your application traffic.
+Once built have `speedscale` record a "snapshot" of your application traffic.
 
 ```bash
-$ codename-litespeed init
-$ codename-litespeed deploy <docker_image_name> # assuming application will serve on port 80
-$ codename-litespeed start snapshot
+$ speedscale init
+$ speedscale deploy <docker_image_name> # assuming application will serve on port 80
+$ speedscale start snapshot
 ```
 
-Now codename-litespeed is serving your application on port 4143 and recording all requests in and out.
+Now `speedscale` is serving your application on port 4143 and recording all requests in and out.
 Generate some traffic by making requests. As an example, requests to your order service might look something like this.
 
 ```bash
@@ -41,18 +39,18 @@ $ curl http://localhost:4143/orders/456
 Stop the recording.
 
 ```bash
-$ codename-litespeed stop snapshot
-$ codename-litespeed inspect <snapshot_id>
+$ speedscale stop snapshot
+$ speedscale inspect <snapshot_id>
 ```
 
-To remove codename-litespeed run:
+To remove `speedscale` run:
 
 ```bash
-codename-litespeed destroy && rm -f $(which codename-litespeed)
+speedscale destroy && rm -f $(which speedscale)
 ```
 
 ## Help
 
-Having trouble with codename-litespeed, or just want to chat about what Speedscale is building?
+Having trouble with `speedscale`, or just want to chat about what we're building?
 Come hang out in the [Speedscale community Slack](https://join.slack.com/t/speedscalecommunity/shared_invite/zt-x5rcrzn4-XHG1QqcHNXIM~4yozRrz8A)!
 
