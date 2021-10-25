@@ -1,0 +1,111 @@
+#!/usr/bin/env bash
+
+set -eof pipefail
+
+SPEEDSCALE_HOME="${HOME}/.speedscale"
+SPEEDSCALE_BINARY="${SPEEDSCALE_HOME}/speedscale"
+
+function Usage() {
+  cat <<EOM
+##### Speedscale Installer #####
+
+Install / uninstall the speedscale CLI.
+
+Optional arguments:
+  -u         Uninstall.
+  -h         Show this message and exit.
+
+EOM
+exit 0
+}
+
+function Uninstall() {
+  echo "WARNING: This will remove speedscale binary and all configuration!"
+  read -r -p "Remove $HOME/.speedscale/? [y/N] " response
+  case "$response" in
+    [yY][eE][sS]|[yY]) 
+      rm -rf "$HOME/.speedscale/"
+    ;;
+  esac
+  exit 0
+}
+
+
+function UpdateRc() {
+  shell=$(basename "$SHELL")
+  case "$shell" in
+    "bash")
+      RCFILE="$HOME/.bashrc"
+    ;;
+    "zsh")
+      RCFILE="$HOME/.zshrc"
+    ;;
+    "csh")
+      RCFILE="$HOME/.cshrc"
+    ;;
+    "fish")
+      RCFILE="$HOME/.config/fish/config.fish"
+    ;;
+    *)
+      RCFILE="$HOME/.profile"
+    ;;
+  esac
+  
+  # allow the user to verify / specify their rcfile
+  read -r -p "Enter the location of your shell's rcfile: [$RCFILE] " GIVEN_RCFILE
+  if [[ -n "$GIVEN_RCFILE" ]];then
+    RCFILE="$GIVEN_RCFILE"
+  fi
+  
+  # ensure rc file exists
+  if ! [[ -s "$RCFILE" ]];then
+    echo "Unable to verify rc file at $RCFILE, cannot continue."
+    exit 1
+  fi
+  
+  # ensure env vars and path
+  if ! grep -q "SPEEDSCALE_HOME=" "$RCFILE";then
+    echo "# speedscale env vars" >> "$RCFILE"
+    echo "export SPEEDSCALE_HOME=\"${SPEEDSCALE_HOME}\"" >> "$RCFILE"
+  fi
+  if ! grep -q -E 'export\sPATH=.*\$SPEEDSCALE_HOME.*' "$RCFILE";then
+    echo 'export PATH=$SPEEDSCALE_HOME:$PATH' >> "$RCFILE"
+  fi
+  
+  echo "rc file updated."
+}
+
+# parse cli flags
+while getopts "uh" arg; do
+  case "${arg}" in
+    u)
+      Uninstall
+      ;;
+    h)
+      Usage
+      ;;
+  esac
+done
+shift $((OPTIND-1))
+
+# ensure speedscale dir
+if ! [[ -d  "$SPEEDSCALE_HOME" ]];then
+  echo "Creating ${SPEEDSCALE_HOME}"
+  mkdir "$SPEEDSCALE_HOME"
+fi
+
+# download
+echo "Downloading latest speedscale binary."
+curl --progress-bar https://downloads.speedscale.com/speedscale -o "$SPEEDSCALE_BINARY"
+chmod +x "$SPEEDSCALE_BINARY"
+
+read -r -p "Update shell rc file? [y/N] " response
+case "$response" in
+  [yY][eE][sS]|[yY]) 
+    UpdateRc
+    ;;
+esac
+
+echo "speedscale binary installed at ${SPEEDSCALE_BINARY}."
+echo "Thanks for downloading the Speedscale CLI!"
+
