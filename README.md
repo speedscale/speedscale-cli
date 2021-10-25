@@ -22,7 +22,7 @@ TODO: Insert asciinema video here showing speedscale in action.
 Install the latest verion of `speedscale`.
 
 ```bash
-curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash
+$ curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash
 ```
 
 To remove `speedscale` run `speedscale destroy && rm -f $(which speedscale)`
