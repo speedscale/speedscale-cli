@@ -25,11 +25,7 @@ Install the latest verion of `speedscale`.
 curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash
 ```
 
-To remove `speedscale` run:
-
-```bash
-speedscale destroy && rm -f $(which speedscale)
-```
+To remove `speedscale` run `speedscale destroy && rm -f $(which speedscale)`
 
 ## Getting Started
 
