@@ -17,13 +17,21 @@ TODO: Insert asciinema video here showing speedscale in action.
 - Record once with a real database and test continuously without it.
 - Load test an application with real traffic.
 
-## Quick Start
+## Install
 
 Install the latest verion of `speedscale`.
 
 ```bash
 curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash
 ```
+
+To remove `speedscale` run:
+
+```bash
+speedscale destroy && rm -f $(which speedscale)
+```
+
+## Getting Started
 
 Before working with `speedscale` your application will need to be built into a [docker](https://docs.docker.com/) container.  Once built
 have `speedscale` run your application and record a "snapshot" of your application traffic.
@@ -50,14 +58,11 @@ $ speedscale stop snapshot
 $ speedscale inspect <snapshot_id>
 ```
 
-To remove `speedscale` run:
+With a snapshot created you can inspect the requests made or run a replay.  See `speedscale help` for details.
 
-```bash
-speedscale destroy && rm -f $(which speedscale)
-```
-
-## Help
+## Help and Feedback
 
 Having trouble with `speedscale`, or just want to chat about what we're building?
 Come hang out in the [Speedscale community Slack](https://join.slack.com/t/speedscalecommunity/shared_invite/zt-x5rcrzn4-XHG1QqcHNXIM~4yozRrz8A)!
+We appreciate any feedback, good or bad, that can help us make `speedscale` better for you.
 
