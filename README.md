@@ -60,6 +60,14 @@ $ speedscale inspect <snapshot_id>
 
 With a snapshot created you can inspect the requests made or run a replay.  See `speedscale help` for details.
 
+Inspect requests:
+
+<img src="/assets/screenshot-1.png" width=500>
+
+Visualize network dependencies:
+
+<img src="/assets/screenshot-2.png" width=500>
+
 ## Help and Feedback
 
 Having trouble with `speedscale`, or just want to chat about what we're building?
