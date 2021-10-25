@@ -62,11 +62,11 @@ With a snapshot created you can inspect the requests made or run a replay.  See 
 
 Inspect requests:
 
-<img src="/assets/screenshot-1.png" width=500>
+<img src="/assets/screenshot-1.png" width=900>
 
 Visualize network dependencies:
 
-<img src="/assets/screenshot-2.png" width=500>
+<img src="/assets/screenshot-2.png" width=900>
 
 ## Help and Feedback
 
