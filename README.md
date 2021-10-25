@@ -2,8 +2,8 @@
 
 # speedscale CLI
 
-`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).  `speedscale` can wrap
-your running application, capturing all inbound and outbound traffic while in use.  Captured traffic can be used to regression test later
+`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).  `speedscale` wraps
+your running application, capturing all inbound and outbound traffic while in use.  Captured traffic is used to regression test later
 versions of your app, or load test by sending the same requests multiple times.
 
 See it in action!
@@ -11,11 +11,11 @@ TODO: Insert asciinema video here showing speedscale in action.
 
 ## Why use speedscale CLI?
 
-- Visualize inbound / outbound network communication.
-- Understand the relationship between an application and its external dependencies.
-- Pinpoint slow API endpoints or high latency from a third party service or database.
-- Record once with a real database and test continuously without it.
-- Load test an application with real traffic.
+- Visualize inbound / outbound network communication
+- Understand the relationship between an application and its external dependencies
+- Pinpoint slow API endpoints or high latency from a third party service or database
+- Record once with a real database and test continuously without it
+- Load test an application with real traffic
 
 ## Install
 
@@ -25,7 +25,11 @@ Install the latest verion of `speedscale`.
 $ curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash
 ```
 
-To remove `speedscale` run `speedscale destroy && rm -f $(which speedscale)`
+Need to remove `speedscale`?
+
+```bash
+$ curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash -s -u
+```
 
 ## Getting Started
 
