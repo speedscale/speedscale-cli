@@ -25,9 +25,8 @@ Install the latest verion of `speedscale`.
 curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash
 ```
 
-Before working with `speedscale` your application will need to be built into a [docker](https://docs.docker.com/) container.
-
-Once built have `speedscale` run your application and record a "snapshot" of your application traffic.
+Before working with `speedscale` your application will need to be built into a [docker](https://docs.docker.com/) container.  Once built
+have `speedscale` run your application and record a "snapshot" of your application traffic.
 
 ```bash
 $ speedscale init
