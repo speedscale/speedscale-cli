@@ -1,6 +1,6 @@
-# speedscale CLI
+<img src="/logo/gold_speedscale_logo_landscape_large.png" width="500">
 
-<img src="/logo/gold_speedscale_logo_landscape_large.png" width="400">
+# speedscale CLI
 
 `speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).  `speedscale` can wrap
 your running application, capturing all inbount and outbount traffic while in use.  Captured traffic can be used to regression test later
