@@ -2,11 +2,14 @@
 
 <img src="/logo/gold_speedscale_logo_landscape_large.png" width="400">
 
-`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).
+`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).  `speedscale` can wrap
+your running application, capturing all inbount and outbount traffic while in use.  Captured traffic can be used to regression test later
+versions of your app, or load test by sending the same requests multiple times.
 
+See it in action!
 TODO: Insert asciinema video here showing speedscale in action.
 
-## Why use speedscale?
+## Why use speedscale CLI?
 
 - Visualize inbound / outbound network communication.
 - Understand the relationship between an application and its external dependencies.
@@ -16,16 +19,19 @@ TODO: Insert asciinema video here showing speedscale in action.
 
 ## Quick Start
 
-NOTE: maybe we want to provide a curl statement here instead.
-[Download](link/to/litespeed/latest/dl) the latest verion of `speedscale`.
+Install the latest verion of `speedscale`.
 
-Before working with `speedscale` your application will need to be built into a docker container.
+```bash
+curl https://raw.githubusercontent.com/speedscale/speedscale/main/install | bash
+```
 
-Once built have `speedscale` record a "snapshot" of your application traffic.
+Before working with `speedscale` your application will need to be built into a [docker](https://docs.docker.com/) container.
+
+Once built have `speedscale` run your application and record a "snapshot" of your application traffic.
 
 ```bash
 $ speedscale init
-$ speedscale deploy <docker_image_name> # assuming application will serve on port 80
+$ speedscale deploy <docker_image_name> # assuming your application listens on port 80
 $ speedscale start snapshot
 ```
 
