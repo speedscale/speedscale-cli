@@ -2,9 +2,9 @@
 
 # speedscale CLI
 
-`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).  `speedscale` wraps
-your running application, capturing all inbound and outbound traffic while in use.  Captured traffic is used to regression test later
-versions of your app, or load test by sending the same requests multiple times.
+`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com), as well
+as the public API to the Speedscale cloud.  `speedscale` wraps your running application, capturing all inbound and outbound
+traffic while in use.  Captured traffic is used to regression test later versions of your app, or load test by sending the same requests multiple times.
 
 See it in action!
 TODO: Insert asciinema video here showing speedscale in action.
@@ -73,4 +73,6 @@ Visualize network dependencies:
 Having trouble with `speedscale`, or just want to chat about what we're building?
 Come hang out in the [Speedscale community Slack](https://join.slack.com/t/speedscalecommunity/shared_invite/zt-x5rcrzn4-XHG1QqcHNXIM~4yozRrz8A)!
 We appreciate any feedback, good or bad, that can help us make `speedscale` better for you.
+
+Speedscale docs available at [docs.speedscale.com](https://docs.speedscale.com).
 
