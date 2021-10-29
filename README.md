@@ -1,4 +1,4 @@
-<img src="/logo/gold_speedscale_logo_landscape_large.png" width="500">
+<img src="https://raw.githubusercontent.com/speedscale/assets/main/logo/gold_speedscale_logo_landscape_large.png" width="500">
 
 # speedscale CLI
 
