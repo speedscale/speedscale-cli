@@ -22,23 +22,27 @@ TODO: Insert asciinema video here showing speedscale in action.
 Install the latest verion of `speedscale`.
 
 ```bash
-$ curl -sL https://downloads.speedscale.com/speedscale/install | sh
+curl -sL https://downloads.speedscale.com/speedscale/install | sh
 ```
 
 Need to remove `speedscale`?
 
 ```bash
-$ speedscale destroy && rm -f $(which speedscale)
+speedscale destroy && rm -f $(which speedscale)
 ```
 
 ## Getting Started
 
-Before working with `speedscale` your application will need to be built into a [docker](https://docs.docker.com/) container.  Once built
+Before working with `speedscale` your application will need to be built into a [docker](https://docs.docker.com/) container.  Once built,
 have `speedscale` run your application and record a "snapshot" of your application traffic.
 
 ```bash
-$ speedscale init
-$ speedscale deploy <docker_image_name> # assuming your application listens on port 80
+speedscale init
+```
+```bash
+speedscale deploy <docker_image_name> # assuming your application listens on port 80
+```
+```bash
 $ speedscale start snapshot
 ```
 
@@ -54,7 +58,9 @@ $ curl http://localhost:4143/orders/456
 Stop the recording.
 
 ```bash
-$ speedscale stop snapshot
+speedscale stop snapshot
+```
+```bash
 $ speedscale inspect <snapshot_id>
 ```
 
