@@ -6,8 +6,7 @@
 as the public API to the Speedscale cloud.  `speedscale` wraps your running application, capturing all inbound and outbound
 traffic while in use.  Captured traffic is used to regression test later versions of your app, or load test by sending the same requests multiple times.
 
-See it in action!
-TODO: Insert asciinema video here showing speedscale in action.
+[![asciicast](https://asciinema.org/a/448099.svg)](https://asciinema.org/a/448099)
 
 ## Why use speedscale CLI?
 
@@ -28,19 +27,30 @@ curl -sL https://downloads.speedscale.com/speedscale/install | sh
 Need to remove `speedscale`?
 
 ```bash
-speedscale destroy && rm -f $(which speedscale)
+speedscale stop capture; rm -f $(which speedscale)
 ```
 
 ## Getting Started
 
-Before working with `speedscale` your application will need to be built into a [docker](https://docs.docker.com/) container.  Once built,
-have `speedscale` run your application and record a "snapshot" of your application traffic.
+Quickly setup the default config.
 
 ```bash
 speedscale init
 ```
+
+Now try one of these flows to get a feel for the tool.
+
+- [I want batteries included, start with a demo app](#demo-app)
+
+### Demo App
+
+
+
+Before working with `speedscale` your application must be built into a [docker](https://docs.docker.com/) container.  Once built,
+have `speedscale` run your application and record a "snapshot" of your application traffic.
+
 ```bash
-speedscale deploy <docker_image_name> # assuming your application listens on port 80
+speedscale start capture --image $DOCKER_IMAGE # assuming your application listens on port 80
 ```
 ```bash
 speedscale start snapshot
