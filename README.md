@@ -43,16 +43,16 @@ speedscale init
 speedscale deploy <docker_image_name> # assuming your application listens on port 80
 ```
 ```bash
-$ speedscale start snapshot
+speedscale start snapshot
 ```
 
 Now `speedscale` is serving your application on port 4143 and recording all requests in and out.
 Generate some traffic by making requests. As an example, requests to your order service might look something like this.
 
 ```bash
-$ curl -X POST http://localhost:4143/orders -d '{"customer_id":"1234", "amount": 123.45}'
+curl -X POST http://localhost:4143/orders -d '{"customer_id":"1234", "amount": 123.45}'
 {"order_id": 456}
-$ curl http://localhost:4143/orders/456
+curl http://localhost:4143/orders/456
 ```
 
 Stop the recording.
@@ -61,7 +61,7 @@ Stop the recording.
 speedscale stop snapshot
 ```
 ```bash
-$ speedscale inspect <snapshot_id>
+speedscale inspect <snapshot_id>
 ```
 
 With a snapshot created you can inspect the requests made or run a replay.  See `speedscale help` for details.
