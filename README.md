@@ -21,7 +21,7 @@ traffic while in use.  Captured traffic is used to regression test later version
 Install the latest verion of `speedscale`.
 
 ```bash
-curl -sL https://downloads.speedscale.com/speedscale/install | sh
+curl -sL https://downloads.speedscale.com/speedscale-cli/install | sh
 ```
 
 Need to remove `speedscale`?
