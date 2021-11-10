@@ -2,9 +2,9 @@
 
 # speedscale CLI
 
-`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com), as well
-as the public API to the Speedscale cloud.  `speedscale` wraps your running application, capturing all inbound and outbound
-traffic while in use.  Captured traffic is used to regression test later versions of your app, or load test by sending the same requests multiple times.
+`speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).
+`speedscale` wraps your running application, capturing all inbound and outbound traffic while in use.  Catputed traffic
+is inspected to show data going to and from your application, with higher level details for various protocols.
 
 [![asciicast](https://asciinema.org/a/448099.svg)](https://asciinema.org/a/448099)
 
@@ -84,7 +84,7 @@ Stop the capture and process the requests.
 speedscale stop capture
 ```
 
-Now inspect the snapshot you just created.
+Now [inspect](#screenshots) the snapshot you just created.
 
 ```
 speedscale inspect
@@ -116,11 +116,13 @@ Make as many requests as you like and then stop the recording.
 speedscale stop snapshot
 ```
 
-Now inspect the snapshot you just created.
+Now [inspect](#screenshots) the snapshot you just created.
 
 ```bash
 speedscale inspect
 ```
+
+# Screenshots
 
 Inspect requests:
 
