@@ -41,22 +41,62 @@ speedscale init
 Now try one of these flows to get a feel for the tool.
 
 - [I want batteries included, start with a demo app](#demo-app)
+- [I don't want to capture, just let me see what the results look like](#inspect-prerecorded-snapshot)
+- [I have a container ready to go]()
 
 ### Demo App
 
-
-
-Before working with `speedscale` your application must be built into a [docker](https://docs.docker.com/) container.  Once built,
-have `speedscale` run your application and record a "snapshot" of your application traffic.
+We'll use an echo server to play with some traffic capture.  The echo server responds with whatever we send it.
+The application port 80 will be redirected to localhost port 8080.
 
 ```bash
-speedscale start capture --image $DOCKER_IMAGE # assuming your application listens on port 80
-```
-```bash
-speedscale start snapshot
+speedscale start capture --image mendhak/http-https-echo --port 8080:80
 ```
 
-Now `speedscale` is serving your application on port 4143 and recording all requests in and out.
+Make some requests to the echo server.  We expect the server to respond with the same body that we send.
+
+```bash
+curl http://localhost:8080/ping
+curl -X POST http://localhost:8080/customer --data '{
+  "id": 23456,
+  "first_name": "Barry",
+  "last_name": "Allen",
+}'
+curl -X POST http://localhost:8080/order --data '{
+  "id": 12345,
+  "customer_id": 23456,
+  "product": "sandwich",
+  "count": 2
+}'
+```
+
+Stop the capture and process the requests.
+
+```bash
+speedscale stop capture
+```
+
+Inspect the snapshot you just created.
+
+```
+speedscale inspect latest
+```
+
+### Inspect Prerecorded Snapshot
+
+
+### Capture My Application
+
+This guide assumes your application is already built into a [docker](https://docs.docker.com/) container.
+`speedscale` will run your application and record a "snapshot" of your application traffic.  Set your application details accordingly.
+
+Let's run your application.  This assumes your app is listening on port 80.
+
+```bash
+speedscale start capture --image $YOUR_DOCKER_IMAGE --port 8080:80
+```
+
+Now `speedscale` is serving your application on localhost port 8080 and recording all requests in and out.
 Generate some traffic by making requests. As an example, requests to your order service might look something like this.
 
 ```bash
@@ -65,16 +105,17 @@ curl -X POST http://localhost:4143/orders -d '{"customer_id":"1234", "amount": 1
 curl http://localhost:4143/orders/456
 ```
 
-Stop the recording.
+Make as many requests as you like and then stop the recording.
 
 ```bash
 speedscale stop snapshot
 ```
-```bash
-speedscale inspect <snapshot_id>
-```
 
-With a snapshot created you can inspect the requests made or run a replay.  See `speedscale help` for details.
+The snapshot is finalized, let's inspect it.
+
+```bash
+speedscale inspect $SNAPSHOT_ID
+```
 
 Inspect requests:
 
