@@ -84,10 +84,10 @@ Stop the capture and process the requests.
 speedscale stop capture
 ```
 
-Inspect the snapshot you just created.
+Now inspect the snapshot you just created.
 
 ```
-speedscale inspect latest
+speedscale inspect
 ```
 
 ### Capture My Application
