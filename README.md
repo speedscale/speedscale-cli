@@ -46,7 +46,7 @@ Now try one of these flows to get a feel for the tool.
 
 ### Inspect Prerecorded Snapshot
 
-Just run the demo command to play with a pre-recorded snapshot.
+Just run the demo command to play with a prerecorded snapshot.
 
 ```bash
 speedscale inspect demo
