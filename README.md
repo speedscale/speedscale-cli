@@ -116,10 +116,10 @@ Make as many requests as you like and then stop the recording.
 speedscale stop snapshot
 ```
 
-The snapshot is finalized, let's inspect it.
+Now inspect the snapshot you just created.
 
 ```bash
-speedscale inspect $SNAPSHOT_ID
+speedscale inspect
 ```
 
 Inspect requests:
