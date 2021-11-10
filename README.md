@@ -106,7 +106,7 @@ Generate some traffic by making requests. As an example, requests to your order 
 
 ```bash
 curl -X POST http://localhost:4143/orders -d '{"customer_id":"1234", "amount": 123.45}'
-{"order_id": 456}
+{"order_id": 456} # response from your service
 curl http://localhost:4143/orders/456
 ```
 
