@@ -40,20 +40,28 @@ speedscale init
 
 Now try one of these flows to get a feel for the tool.
 
+- [I don't want to capture, just let me play with some data](#inspect-prerecorded-snapshot)
 - [I want batteries included, start with a demo app](#demo-app)
-- [I don't want to capture, just let me see what the results look like](#inspect-prerecorded-snapshot)
-- [I have a container ready to go]()
+- [I have an containerized applicaton, show me my traffic](#capture-my-application)
+
+### Inspect Prerecorded Snapshot
+
+Just run the demo command to play with a pre-recorded snapshot.
+
+```bash
+speedscale inspect demo
+```
 
 ### Demo App
 
 We'll use an echo server to play with some traffic capture.  The echo server responds with whatever we send it.
-The application port 80 will be redirected to localhost port 8080.
+The echo server listens on port 80, which will be redirected to localhost port 8080.
 
 ```bash
 speedscale start capture --image mendhak/http-https-echo --port 8080:80
 ```
 
-Make some requests to the echo server.  We expect the server to respond with the same body that we send.
+Make some requests to the echo server on the local port.  We expect the response body to match the request body that we're sending.
 
 ```bash
 curl http://localhost:8080/ping
@@ -81,9 +89,6 @@ Inspect the snapshot you just created.
 ```
 speedscale inspect latest
 ```
-
-### Inspect Prerecorded Snapshot
-
 
 ### Capture My Application
 
