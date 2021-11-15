@@ -6,6 +6,8 @@
 `speedscale` wraps your running application, capturing all inbound and outbound traffic while in use.  Catputed traffic
 is inspected to show data going to and from your application, with higher level details for various protocols.
 
+***
+
 [![asciicast](https://asciinema.org/a/448099.svg)](https://asciinema.org/a/448099)
 
 ## Why use speedscale CLI?
@@ -31,6 +33,25 @@ speedscale stop capture; rm -f $(which speedscale)
 ```
 
 ## Getting Started
+
+`speedscale` sits between your application and the network to gain visibility into the network requests.
+
+```
+                   ┌────────────────────────────┐         ┌─────────────────┐
+                   │ docker                     │     ┌───►  your_other_api │
+                   │                            │     │   └─────────────────┘
+                   │                            │     │
+┌─────────────┐    │    ┌────────────────────┐  │     │   ┌────────────┐
+│ http_client ├────┼────► speedscale_goproxy ├──┼─────┼───► stripe.com │
+└─────────────┘    │    └────────┬───▲───────┘  │     │   └────────────┘
+                   │             │   │          │     │
+                   │         ┌───▼───┴───┐      │     │   ┌─────────────┐
+                   │         │ your_app  │      │     └───► postgres_db │
+                   │         └───────────┘      │         └─────────────┘
+                   │                            │
+                   └────────────────────────────┘
+```
+
 
 Quickly setup the default config.
 
