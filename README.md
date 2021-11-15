@@ -8,7 +8,7 @@ is inspected to show data going to and from your application, with higher level 
 
 ***
 
-[![asciicast](https://asciinema.org/a/448099.svg)](https://asciinema.org/a/448099)
+[![asciicast](https://asciinema.org/a/449293.svg)](https://asciinema.org/a/449293)
 
 ## Why use speedscale CLI?
 
