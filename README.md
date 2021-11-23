@@ -79,7 +79,7 @@ We'll use an echo server to play with some traffic capture.  The echo server res
 The echo server listens on port 80, which will be redirected to localhost port 8080.
 
 ```bash
-speedscale start capture --image mendhak/http-https-echo --port 8080:80
+speedscale start capture --image mendhak/http-https-echo --port-mapping 8080:80
 ```
 
 Make some requests to the echo server on the local port.  We expect the response body to match the request body that we're sending.
@@ -119,7 +119,7 @@ This guide assumes your application is already built into a [docker](https://doc
 Let's run your application.  This assumes your app is listening on port 80.
 
 ```bash
-speedscale start capture --image $YOUR_DOCKER_IMAGE --port 8080:80
+speedscale start capture --image $YOUR_DOCKER_IMAGE --port-mapping 8080:80
 ```
 
 Now `speedscale` is serving your application on localhost port 8080 and recording all requests in and out.
