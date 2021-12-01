@@ -3,8 +3,7 @@
 # speedscale CLI
 
 `speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).
-`speedscale` wraps your running application, capturing all inbound and outbound traffic while in use.  Catputed traffic
-is inspected to show data going to and from your application, with higher level details for various protocols.
+`speedscale` wraps your running application, capturing all inbound and outbound traffic while in use.  View all calls going into and out of your application in a slick text UI. Higher level details are shown for various protocols including gRPC, Postgres and others.
 
 ***
 
@@ -15,8 +14,6 @@ is inspected to show data going to and from your application, with higher level 
 - Visualize inbound / outbound network communication
 - Understand the relationship between an application and its external dependencies
 - Pinpoint slow API endpoints or high latency from a third party service or database
-- Record once with a real database and test continuously without it
-- Load test an application with real traffic
 
 ## Getting Started
 
