@@ -7,7 +7,7 @@
 
 ***
 
-[![asciicast](https://asciinema.org/a/89y4fyL3TX9UGWbewAa5YOoyy.svg)](https://asciinema.org/a/89y4fyL3TX9UGWbewAa5YOoyy)
+[![asciicast](https://asciinema.org/a/453342.svg)](https://asciinema.org/a/453342)
 
 ## Why use speedscale CLI?
 
