@@ -9,13 +9,13 @@
 
 [![asciicast](https://asciinema.org/a/453342.svg)](https://asciinema.org/a/453342)
 
-## Why use speedscale CLI?
+# Why use speedscale CLI?
 
 - Visualize inbound / outbound network communication
 - Understand the relationship between an application and its external dependencies
 - Pinpoint slow API endpoints or high latency from a third party service or database
 
-## Getting Started
+# Getting Started
 
 `speedscale` documentation can be found in our [public docs](https://docs.speedscale.com/cli/speedscale).
 Get started by [installing speedscale](https://docs.speedscale.com/cli/speedscale#install-update), then run
@@ -31,7 +31,7 @@ Visualize network dependencies:
 
 <img src="/assets/screenshot-2.png" width=900>
 
-## Help and Feedback
+# Help and Feedback
 
 If you are having trouble with `speedscale` or would like to report a bug, please feel free to
 [submit an issue](https://github.com/speedscale/speedscale-cli/issues/new/choose).
