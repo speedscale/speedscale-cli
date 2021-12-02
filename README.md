@@ -5,15 +5,13 @@
 `speedscale` is a container-centric, capture and replay CLI tool created by [Speedscale](https://speedscale.com).
 `speedscale` wraps your running application, capturing all inbound and outbound traffic while in use.  View all calls going into and out of your application in a slick text UI. Higher level details are shown for various protocols including gRPC, Postgres and others.
 
-***
-
-[![asciicast](https://asciinema.org/a/453342.svg)](https://asciinema.org/a/453342)
-
-# Why use speedscale CLI?
-
 - Visualize inbound / outbound network communication
 - Understand the relationship between an application and its external dependencies
 - Pinpoint slow API endpoints or high latency from a third party service or database
+
+***
+
+[![asciicast](https://asciinema.org/a/453342.svg)](https://asciinema.org/a/453342)
 
 # Getting Started
 
