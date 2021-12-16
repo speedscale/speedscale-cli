@@ -19,6 +19,8 @@
 Get started by [installing speedscale](https://docs.speedscale.com/cli/speedscale#install-update), then run
 through one of the [guides](https://docs.speedscale.com/cli/speedscale/guides).
 
+Please also join us for a webinar where we go over why we built the CLI, use cases where we envisioned it to help, how-to and general opportunity to ask any questions you like!  [Register here](https://us02web.zoom.us/webinar/register/WN_SBGvlHAFS0GoKFqkEBsoXw) and attend January 12th, 2022, 2pm EST.
+
 # Screenshots
 
 Inspect requests:
