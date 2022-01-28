@@ -19,7 +19,7 @@ As you get started, come chat with us in the [Speedscale Community Slack](https:
 
 Download the latest version of speedscale, which will update the binary in your ~/.speedscale directory.
 ```
-sh "$(curl -sL https://downloads.speedscale.com/speedscale-cli/install)"
+sh -c "$(curl -sL https://downloads.speedscale.com/speedscale-cli/install)"
 ```
 Initialize speedscale and answer the questions that follow.
 ```
