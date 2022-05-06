@@ -52,8 +52,6 @@ Still have questions? Join our [Speedscale Community Slack](https://slack.speeds
 [Docker Demo App](https://cli.speedscale.com/cli/docker-observability/demo-app)
 
 
-Please also join us for a webinar where we go over why we built the CLI, use cases where we envisioned it to help, how-to and general opportunity to ask any questions you like!  [Register here](https://us02web.zoom.us/webinar/register/WN_SBGvlHAFS0GoKFqkEBsoXw) and attend January 12th, 2022, 2pm EST.
-
 ***
 
 <img src="https://user-images.githubusercontent.com/29799065/148107570-4fde70d1-d2aa-40d4-8b71-bf7ba2bc8107.gif" width="800">
