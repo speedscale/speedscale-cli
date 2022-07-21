@@ -41,9 +41,9 @@ Still have questions? Join our [Speedscale Community Slack](https://slack.speeds
 # Docs
 `speedscale` documentation can be found in our [public docs](https://cli.speedscale.com/)
 
-[Container Mode](https://cli.speedscale.com/cli/introduction#supported-architectures)
+[Container Mode](https://cli.speedscale.com/#supported-architectures)
 
-[Proxy Mode](https://cli.speedscale.com/cli/introduction#supported-architectures)
+[Proxy Mode](https://cli.speedscale.com/#supported-architectures)
 
 [Explore Sample Data](https://cli.speedscale.com/cli/explore-sample-data)
 
